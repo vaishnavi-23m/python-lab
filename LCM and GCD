@@ -1,0 +1,17 @@
+import math
+x= int(input('Enter First number:'))
+y =int(input('Enter Second number:'))
+z= int(input('Enter Third number:'))
+gcd_ans = math.gcd(x,y)
+gcd_final=math.gcd(gcd_ans,z)
+lcm_ans = x*y/ gcd_final
+print(lcm_ans)
+print(gcd_final)
+
+Output:
+
+Enter First number:3
+Enter Second number:5
+Enter Third number:15
+15.0
+1
