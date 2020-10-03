@@ -1,0 +1,44 @@
+#Take choice from user and perform particular operation on array (1. Copy, 2. Remove duplicates, 3. Delete at kth index, 4. Search an item, 5. Display contents)
+n = int(input("enter size of the array : "))
+A1 = []
+A2 = [None]*n
+print("enter "+str(n)+" numbers in array:")
+for i in range(0,n):
+    num = int(input())
+    A1.append(num)
+m = int(input("enter a number between 1 to 4 :"))
+if m==1:
+    print("Array 1: ",A1)
+    for i in range(0,n):
+        A2[i] = A1[i]
+    x = 5
+elif m==2:
+   print("Array 1: ",A1) 
+   A2 = []
+   for i in A1:
+        if i not in A2 :
+            A2.append(i)
+            x = 5
+elif m==3:
+    y = int(input("enter the index number that have to delete :"))
+    del A1[y:y+1]
+    x = 5
+elif m==4:
+    print("Array is : ",A1)
+    s = int(input("enter number to search : "))
+    def search(s):
+        for i in range(0,n) :
+            if s == A1[i]:
+                return i+1
+    x = 5
+if x==5:
+    if m==1:
+        print("Array 2: ",A2)
+    elif m==2:
+        print("Array 2: ",A2)
+    elif m==3:
+        print("Array 1: ",A1)
+    elif m==4:
+        print(str(s)+" is found at location ",search(s))
+else:
+    print("Invalid entry!enter a number
